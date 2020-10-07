@@ -11,6 +11,24 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World");
+            Console.WriteLine("Intrati numarul de pantof: ");
+            string line;
+            line = Console.ReadLine();
+
+            int numarPantof;
+            try
+            {
+                numarPantof = int.Parse(line);
+                
+                Console.WriteLine($"Aveti {numarPantof} pantofi");
+            }
+            catch (FormatException e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+
+            //int.TryParse(line,out numarPantof );
         }
     }
 }
